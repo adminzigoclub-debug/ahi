@@ -1,13 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-// https://vite.dev/config/
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // Alias absolutos: evitan cadenas de "../../../.." al crecer el árbol de carpetas.
       '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
@@ -30,4 +32,4 @@ export default defineConfig({
   server: {
     port: 5173,
   },
-});
+})
