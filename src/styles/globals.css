@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * TOKENS DE MARCA — "ahí"
+ * ------------------------------------------------------------------
+ * Paleta oficial cerrada (9 colores). No introducir hexadecimales
+ * nuevos en componentes: siempre referenciar estas variables a través
+ * de las clases de Tailwind (bg-navy, text-gray-institutional, etc).
+ */
+:root {
+  --color-navy: #1e2b50;
+  --color-orange: #ff7b16;
+  --color-white: #ffffff;
+  --color-gray-institutional: #a9a9a9;
+  --color-gray-light: #eaeaea;
+  --color-success: #2e8b57;
+  --color-wine: #8b1e3f;
+  --color-link: #3f66d7;
+  --color-black: #111111;
+
+  --radius-card: 1.25rem;
+  --radius-control: 0.75rem;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white font-sans font-regular text-black antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-sans font-bold text-navy;
+  }
+
+  /* Accesibilidad: respeta la preferencia de movimiento reducido. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+}

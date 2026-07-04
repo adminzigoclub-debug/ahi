@@ -1,0 +1,23 @@
+{
+  "name": "ahí.com | el regalo perfecto",
+  "short_name": "ahí",
+  "description": "¿No sabes qué regalarle? ahí descubre lo que desea recibir.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E2B50",
+  "theme_color": "#1E2B50",
+  "icons": [
+    {
+      "src": "/brand/isotipo.png",
+      "sizes": "1025x1025",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/brand/isotipo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
